@@ -1,0 +1,13 @@
+server:
+  port : ${PORT:8070}
+
+routing:
+  sibyl:
+    url: "http://localhost:8080/sibyl/v1/processImage"
+  judge:
+    url: "http://localhost:8090/judge/v1/processData"
+
+confidencescore:
+  prescriber: 40
+  patient: 40
+  drug: 40
