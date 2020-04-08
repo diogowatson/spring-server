@@ -34,3 +34,57 @@ spring:
     zipkin:
         base-url: http://127.0.0.1:9411
         host: localhost
+
+metis:
+    opencvdll: "/lib/opencv_java412.dll"
+    opencvso: "/lib/libopencv_java320.so"
+    tesseractdata: "tessdata.zip"
+    tesseractdatafinal: "/tessTemp"
+    minImageWidth: 1200
+    minImageHeight: 1560
+    minWordPercentSize: 0.005
+    transformedImageFormat: "jpg"
+    NoneTag: "None"
+    doctorTag: "Doctor"
+    patientTag: "Patient"
+    drugTag: "Drug"
+    pharmacyTag: "Pharmacy"
+    logCatBoostTraining: false
+    catBoostTraining: "C:/Users/cowilk1/Desktop/catBoost/catBoostTraining.txt"
+    catBoostTaggingModel: "/catBoost/catBoostTaggingModel.cbm"
+    readYoloToRecognizeTemplate: false
+    yoloModelWeights: "/yolodata/test_100000.weights"
+    yoloRXModelConfiguration: "/yolodata/sdm_rx.cfg"
+    yoloTemplateModelConfiguration: "/yolodata/multi.cfg"
+    yoloTemplateModelWeights: "/yolodata/multi_7600.weights"
+    yoloRXModelWeights: "/yolodata/sdm_rx_5000.weights"
+    featureTermsFilePath: "/catBoost/refData/featureTerms.txt"
+    importantDoctorTermsFilePath: "/catBoost/refData/importantDoctorTerms.txt"
+    importantPatientTermsFilePath: "/catBoost/refData/importantPatientTerms.txt"
+    importantDrugTermsFilePath: "/catBoost/refData/importantDrugTerms.txt"
+    importantPharmacyTermsFilePath: "/catBoost/refData/importantPharmacyTerms.txt"
+    additionalFeaturesFilePath: "/catBoost/refData/additionalFeatures.txt"
+    templatateTagMapFilePath: "/templateTag/templateTagMap.json"
+    confidenceThresholdUncleanedBoxesWord: 80
+    confidenceThresholdCleanedBoxesWord: 65
+    confidenceThresholdUncleanedBoxesLine: 89
+    confidenceThresholdCleanedBoxesLine: 60
+    confidenceThresholdYOLOTemplate: 0.9
+    xMultipleForAvgCharacterHeight: 0.5
+    yMultipleForAvgCharacterHeight: 0.2
+    classTagMap:
+        0: "None"
+        1: "Doctor"
+        2: "Patient"
+        3: "Drug"
+        4: "Pharmacy"
+
+test:
+    adeHWtoHermesFile: "src/test/resources/HWRxImagePayload_serialized.json"
+    adeSibylIntermediateFile: "src/test/resources/extracted.json"
+
+payload:
+    prescriptionImagePrefix: "-----BEGIN BASE64-----\n"
+    prescriptionImageSuffix: "\n-----END BASE64-----\n"
+
+
